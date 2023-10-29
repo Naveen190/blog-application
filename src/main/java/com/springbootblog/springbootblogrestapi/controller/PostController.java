@@ -27,7 +27,7 @@ public class PostController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO , @PathVariable(name = "id") long id){
+    public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO , @PathVariable(name = "id") Long id){
         PostDTO postResponse = postService.updatePost(postDTO , id);
         return ResponseEntity.ok(postResponse);
     }

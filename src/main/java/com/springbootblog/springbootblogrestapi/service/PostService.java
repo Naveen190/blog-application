@@ -2,6 +2,7 @@ package com.springbootblog.springbootblogrestapi.service;
 
 import com.springbootblog.springbootblogrestapi.entity.Post;
 import com.springbootblog.springbootblogrestapi.payload.PostDTO;
+import com.springbootblog.springbootblogrestapi.payload.PostResponse;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public interface PostService {
 
     PostDTO createPost(PostDTO postDTO);
 
-    List<PostDTO> getAllPost();
+    PostResponse getAllPost(int pageNo , int pageSize , String sortBy , String sortDir);
 
     PostDTO getPostById(long id);
 
